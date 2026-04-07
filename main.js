@@ -1,8 +1,9 @@
-const generateCardButton = document.getElementById("generateCard");
-const cardText = document.getElementById("card");
+const generateCardButton = document.getElementById("generateCard"); //generate card button
+const cardText = document.getElementById("card"); //card text element
 
 function generateCard() {
-    const suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
+    //function to generate card
+    const suits = ["Hearts", "Diamonds", "Clubs", "Spades"]; //list of suits
     const ranks = [
         "2",
         "3",
@@ -17,10 +18,10 @@ function generateCard() {
         "Queen",
         "King",
         "Ace",
-    ];
-    const randomSuit = suits[Math.floor(Math.random() * suits.length)];
-    const randomRank = ranks[Math.floor(Math.random() * ranks.length)];
-    const card = `${randomRank} of ${randomSuit}`;
-    cardText.textContent = card;
+    ]; //list of ranks
+    const randomSuit = suits[Math.floor(Math.random() * suits.length)]; //get random suit
+    const randomRank = ranks[Math.floor(Math.random() * ranks.length)]; //get random rank
+    const card = `${randomRank} of ${randomSuit}`; //set card string text
+    cardText.textContent = card; //set card text content to generated card
 }
-generateCardButton.addEventListener("click", generateCard);
+generateCardButton.addEventListener("click", generateCard); //generate card when Generate Card button clicked
