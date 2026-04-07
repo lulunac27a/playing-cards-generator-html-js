@@ -23,3 +23,4 @@ function generateCard() {
     const card = `${randomRank} of ${randomSuit}`;
     cardText.textContent = card;
 }
+generateCardButton.addEventListener("click", generateCard);
