@@ -19,6 +19,7 @@ function generateCard() {
         "King",
         "Ace",
     ]; //list of ranks
+    const symbols = ["♥", "♦", "♣", "♠"]; //list of symbols
     const randomSuit = suits[Math.floor(Math.random() * suits.length)]; //get random suit
     const randomRank = ranks[Math.floor(Math.random() * ranks.length)]; //get random rank
     const card = `${randomRank} of ${randomSuit}`; //set card string text
