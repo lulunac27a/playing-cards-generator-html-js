@@ -22,7 +22,7 @@ function generateCard() {
     const symbols = ["♥", "♦", "♣", "♠"]; //list of symbols
     const randomSuit = suits[Math.floor(Math.random() * suits.length)]; //get random suit
     const randomRank = ranks[Math.floor(Math.random() * ranks.length)]; //get random rank
-    const card = `${randomRank} of ${randomSuit}`; //set card string text
+    const card = `${randomRank} of ${randomSuit} (${symbols[suits.indexOf(randomSuit)]})`; //set card string text
     cardText.textContent = card; //set card text content to generated card
 }
 generateCardButton.addEventListener("click", generateCard); //generate card when Generate Card button clicked
