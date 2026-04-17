@@ -1,5 +1,6 @@
 const generateCardButton = document.getElementById("generateCard"); //generate card button
 const cardText = document.getElementById("card"); //card text element
+const numCardsInput = document.getElementById("numCards"); //number of cards input element
 
 function generateCard() {
     //function to generate card
@@ -20,9 +21,21 @@ function generateCard() {
         "Ace",
     ]; //list of ranks
     const symbols = ["♥", "♦", "♣", "♠"]; //list of symbols
-    const randomSuit = suits[Math.floor(Math.random() * suits.length)]; //get random suit
-    const randomRank = ranks[Math.floor(Math.random() * ranks.length)]; //get random rank
-    const card = `${randomRank} of ${randomSuit} (${symbols[suits.indexOf(randomSuit)]})`; //set card string text
-    cardText.textContent = card; //set card text content to generated card
+    let cardList = []; //list to hold generated cards
+    for (const suit of suits) {
+        //loop through suits
+        for (const rank of ranks) {
+            //loop through ranks
+            cardList.push(
+                `${rank} of ${suit} (${symbols[suits.indexOf(suit)]})`,
+            ); //add card to list
+        }
+    }
+    for (let i = 0; i < numCardsInput.value; i++) {
+        //loop to generate specified number of cards
+        const card = cardList[Math.floor(Math.random() * cardList.length)]; //get random card from list
+        cardList.splice(cardList.indexOf(card), 1); //remove card from list to avoid duplicates
+        cardText.textContent += card + "\n"; //add card to text content
+    }
 }
 generateCardButton.addEventListener("click", generateCard); //generate card when Generate Card button clicked
