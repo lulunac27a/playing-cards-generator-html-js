@@ -42,7 +42,7 @@ function generateCard() {
         for (const rank of ranks) {
             //loop through ranks
             cardList.push(
-                `${rank} of ${suit} (${symbols[suits.indexOf(suit)]})`,
+                `${rank} of ${suit} (${symbols[suits.indexOf(suit)]})\n ${rankAbbreviations[ranks.indexOf(rank)]}${symbols[suits.indexOf(suit)]}`,
             ); //add card to list
         }
     }
