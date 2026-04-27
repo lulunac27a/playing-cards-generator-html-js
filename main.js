@@ -20,6 +20,21 @@ function generateCard() {
         "King",
         "Ace",
     ]; //list of ranks
+    const rankAbbreviations = [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "J",
+        "Q",
+        "K",
+        "A",
+    ]; //list of rank abbreviations
     const symbols = ["♥", "♦", "♣", "♠"]; //list of symbols
     let cardList = []; //list to hold generated cards
     for (const suit of suits) {
