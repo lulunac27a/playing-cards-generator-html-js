@@ -38,12 +38,12 @@ function generateCard() {
     const symbols = ["♥", "♦", "♣", "♠"]; //list of symbols
     let cardList = []; //list to hold generated cards
     for (const suit of suits) {
-        //loop through suits
+        //repeat for each suit
         for (const rank of ranks) {
-            //loop through ranks
+            //repeat for each rank
             cardList.push(
                 `${rank} of ${suit} (${symbols[suits.indexOf(suit)]})\n ${rankAbbreviations[ranks.indexOf(rank)]}${symbols[suits.indexOf(suit)]}`,
-            ); //add card to list
+            ); //add card to list in format "Rank of Suit (Symbol)\nRankAbbreviationSymbol"
         }
     }
     for (let i = 0; i < numCardsInput.value; i++) {
