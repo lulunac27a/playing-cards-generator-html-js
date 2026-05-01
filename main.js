@@ -47,7 +47,7 @@ function generateCard() {
         }
     }
     for (let i = 0; i < numCardsInput.value; i++) {
-        //loop to generate specified number of cards
+        //repeat loop to generate specified number of cards
         const card = cardList[Math.floor(Math.random() * cardList.length)]; //get random card from list
         cardList.splice(cardList.indexOf(card), 1); //remove card from list to avoid duplicates
         cardText.textContent += card + "\n"; //add card to text content
