@@ -43,7 +43,7 @@ function generateCard() {
             //repeat for each rank
             cardList.push(
                 `${rank} of ${suit} (${symbols[suits.indexOf(suit)]})\n ${rankAbbreviations[ranks.indexOf(rank)]}${symbols[suits.indexOf(suit)]}`,
-            ); //add card to list in format "Rank of Suit (Symbol)\nRankAbbreviationSymbol"
+            ); //add card to list in format
         }
     }
     for (let i = 0; i < numCardsInput.value; i++) {
