@@ -2,7 +2,7 @@ const generateCardButton = document.getElementById("generateCard"); //generate c
 const cardText = document.getElementById("card"); //card text element
 const numCardsInput = document.getElementById("numCards"); //number of cards input element
 
-function generateCard() {
+const generateCard = () => {
     //function to generate card
     const suits = ["Hearts", "Diamonds", "Clubs", "Spades"]; //list of suits
     const ranks = [
@@ -52,5 +52,5 @@ function generateCard() {
         cardList.splice(cardList.indexOf(card), 1); //remove card from list to avoid duplicates
         cardText.textContent += card + "\n"; //add card to text content
     }
-}
+};
 generateCardButton.addEventListener("click", generateCard); //generate card when Generate Card button clicked
