@@ -47,8 +47,9 @@ const generateCard = () => {
         }
     }
 
-    const numCards = parseInt(numCardsInput.value, 10);
+    const numCards = parseInt(numCardsInput.value, 10); //parse number of cards from input
     if (isNaN(numCards) || numCards < 1 || numCards > 52) {
+        //if input is not a number or out of range, show error message
         cardText.textContent = "Please enter a number between 1 and 52";
         return;
     }
