@@ -46,20 +46,17 @@ const generateCard = () => {
             ); //add card to list in format
         }
     }
-
     const numCards = parseInt(numCardsInput.value, 10); //parse number of cards from input
     if (isNaN(numCards) || numCards < 1 || numCards > 52) {
         //if input is not a number or out of range, show error message
         cardText.textContent = "Please enter a number between 1 and 52"; //display error message
         return;
     }
-
     cardText.textContent = ""; //clear previous results
-
-    const cardsToGenerate = Math.min(numCards, cardList.length);
+    const cardsToGenerate = Math.min(numCards, cardList.length); //number of cards to generate
     for (let i = 0; i < cardsToGenerate; i++) {
         //repeat loop to generate specified number of cards
-        const randomIndex = Math.floor(Math.random() * cardList.length);
+        const randomIndex = Math.floor(Math.random() * cardList.length); //get random index from card list
         const card = cardList[randomIndex]; //get random card from list
         cardList.splice(randomIndex, 1); //remove card from list to avoid duplicates
         cardText.textContent += card + "\n"; //add card to text content
